@@ -14,7 +14,7 @@
   <include file="$(find my_robot)/launch/robot_description.launch"/>
 
   <!-- World File -->
-  <arg name="world_file" default="$(find my_robot)/worlds/ball_chaser2.world"/>
+  <arg name="world_file" default="$(find my_robot)/worlds/map.world"/>
 
   <!-- Launch Gazebo World -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -34,4 +34,9 @@
 
 <!--launch rviz-->
 <node name="rviz" pkg="rviz" type="rviz" respawn="false"/>
+
+<!--launch teleop-->
+<include file="$(find my_robot)/launch/teleop.launch"/>
 </launch>
+
+
